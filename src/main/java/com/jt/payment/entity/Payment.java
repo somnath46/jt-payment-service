@@ -21,4 +21,6 @@ public class Payment {
 	private Integer id;
 	private String paymentStatus;
 	private String transactionId;
+	private Integer orderId;
+	private double amount;
 }
