@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jt.payment.entity.Payment;
+import com.jt.payment.dto.PaymentDto;
 import com.jt.payment.service.PaymentService;
 
 @RestController
@@ -19,7 +19,7 @@ public class PaymentController {
 	private PaymentService paymentService;
 
 	@PostMapping
-	public ResponseEntity<Payment> doPayment(@RequestBody Payment payment) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.doPayment(payment));
+	public ResponseEntity<PaymentDto> doPayment(@RequestBody PaymentDto paymentDto) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.doPayment(paymentDto));
 	}
 }
