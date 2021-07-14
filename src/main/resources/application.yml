@@ -7,6 +7,10 @@ spring:
          enabled: true
    application:
       name: PAYMENT-SERVICE
+logging:
+#   level: info
+   file: 
+      name: E:/eclipse_workspaces/microservice-prep/jt-services.log
 
 # moved to jt-config-properties
 # eureka:
